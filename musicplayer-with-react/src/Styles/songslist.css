@@ -1,0 +1,101 @@
+.songs-list-area{
+    width: 0px;
+    opacity: 0;
+    max-width: 520px;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    right: auto;
+    transition: all 1s;
+    overflow: scroll;
+}
+
+.songs-list-area::-webkit-scrollbar{
+    display: none;
+}
+
+.songs-list-area.active{
+    width: 100%;
+    opacity: 1;
+    display: block;
+    padding: 40px 30px 10px;
+}
+
+.songs-list-area .list-name{
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.songs-list-area .songs-list{
+    width: 100%;
+    height: 95%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px 20px 0 0;
+    overflow: auto;
+}
+/* /////////////////////////////////////// */
+
+/* songs-item */
+
+.queue{
+    width: 100%;
+    height: 80px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid var(--alpha-color);
+    position: relative;
+}
+
+.queue::after{
+    content: '';
+    width: 80%;
+    height: 1px;
+    right: auto;
+    background: #666;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0;
+}
+
+.queue-cover{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px;
+    position: relative;
+}
+
+.queue-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.queue-cover i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: var(--primary-color);
+    display: none;
+}
+
+.queue.active i{
+    display: block;
+}
+
+.queue .name{
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+.queue .artist{
+    text-transform: capitalize;
+    opacity: 0.5;
+    margin-top: 5px;
+}

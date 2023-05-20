@@ -1,0 +1,37 @@
+.playlist-section{
+    margin: 25px 0;
+}
+
+.playlist-section h1{
+    word-wrap: break-word;
+    font-size: 25px;
+    text-transform: capitalize;
+    padding: 0 0 10px 15px;
+}
+
+.playlist-container{
+    position: relative;
+    min-height: 200px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.playlist-card{
+    display: inline-block;
+    margin: 0 10px;
+    text-transform: capitalize;
+}
+
+.playlist-card p{
+    padding-left: 5px;
+}
+
+.playlist-card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+}

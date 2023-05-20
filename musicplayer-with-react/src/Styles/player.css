@@ -1,0 +1,187 @@
+.player-section{
+    background: var(--alpha-color);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 520px;
+    height: 120px;
+    position: fixed;
+    bottom: 0;
+    right: auto;
+    transition: all 1s;
+    /* z-index: 5; */
+}
+
+
+.music-seekbar{
+    -webkit-appearance: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.music-seekbar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 7px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--painting-color);
+    box-shadow: -400px 0 0 400px var(--painting-color);
+}
+
+.player-section .song-name{
+    text-align: center;
+    font-weight: 300;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.player-section .artist-name{
+    text-align: center;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.player-section .controls{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player-section .controls .hide{
+    display: none;
+}
+
+
+.player-section .controls i{
+    font-size: 25px;
+    color: rgb(121, 121, 121);
+}
+
+.player-section .controls .main-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+
+}
+
+
+.player-section .controls .main-controls i{
+    font-size: 40px;
+    color: #fff;
+    transition: all .5s;
+}
+
+
+.player-section .controls .main-controls i .fa-play{
+    position: absolute;
+    z-index: 7;
+}
+
+.player-section .controls .main-controls i:hover{
+    color:#9c9c9c
+}
+
+
+/* maximaize view */
+
+.player-section.active{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.hide{
+    opacity: 0;
+    display: none;
+}
+
+.player-section.active .hide{
+    opacity: 1;
+    display: block;
+}
+
+.player-section.active .main-controls .hide{
+    opacity: 0;
+    display: none;
+} 
+
+.player-section.active .top-controls{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.player-section.active .top-controls i{
+    font-size: 30px;
+}
+
+.player-section.active .song-name{
+    margin-top: 25px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.player-section.active .artist-name{
+    font-size: 25px;
+}
+
+.player-section.active .max-cover{
+    width: 300px;
+    border-radius: 30px;
+    margin-top: 50px;
+    box-shadow: var(--shadow);
+}
+
+.player-section.active .seekbar-container{
+    margin-top: 50px;
+    height: 100px;
+    width: 90%;
+    position: relative;
+}
+
+.player-section.active .music-seekbar{
+    position: relative;
+    width: 100%;
+    height: 8px;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.player-section.active .seekbar-container .current-time{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+
+.player-section.active .seekbar-container .duration-time{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+
+.player-section.active .controls{
+    margin-top: 50px;
+    width: 100%;
+}
+
+.player-section.active .main-controls{
+    width: 50%;
+    color: #e1e1e1;
+}
+
+.player-section.active .main-controls i:hover{    
+    color: #9c9c9c;
+}
